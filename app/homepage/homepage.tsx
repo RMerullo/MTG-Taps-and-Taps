@@ -1,5 +1,6 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+import button from "./buttons.css";
 
 export function HomePage() {
   return (
@@ -40,6 +41,9 @@ export function HomePage() {
               ))}
             </ul>
           </nav>
+        </div>
+        <div className="ButtonContainer">
+          <button className="homepage-button">Add New Player</button>
         </div>
       </div>
     </main>
