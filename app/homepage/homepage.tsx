@@ -1,5 +1,5 @@
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
+import beerimage from "./beer-svgrepo-com.svg";
+import wizardimage from "./hat-wizard-svgrepo-com.svg";
 import button from "./buttons.css";
 
 export function HomePage() {
@@ -8,6 +8,12 @@ export function HomePage() {
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <div className="max-w-[300px] w-full space-y-6 px-4">
           <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
+            <div className="App">
+              <img src={beerimage} alt="Beer Image" style={{ height: 53, width: 36 }}/>
+            </div>
+            <div className="App">
+              <img src={wizardimage} alt="Beer Image" style={{ height: 53, width: 36 }}/>
+            </div>
             <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
               MTG Taps and Taps
             </p>
