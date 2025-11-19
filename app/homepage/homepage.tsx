@@ -1,33 +1,29 @@
 import beerimage from "./beer-svgrepo-com.svg";
 import wizardimage from "./hat-wizard-svgrepo-com.svg";
 import { NavLink } from "react-router";
-import './buttons.css';
+import './homepage.css';
 
 export function HomePage() {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <div className="max-w-[300px] w-full space-y-6 px-4">
-          <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-            <div className="App">
-              <img src={beerimage} alt="Beer Image" style={{ height: 53, width: 36 }} />
+            <div className="image-container">
+              <img src={beerimage} alt="Beer Image" className="icon" />
+              <img src={wizardimage} alt="Beer Image" className="icon" />
             </div>
-            <div className="App">
-              <img src={wizardimage} alt="Beer Image" style={{ height: 53, width: 36 }} />
+            <div className="button-container">
+              <div className="individual-button-container">
+                <NavLink to="/newplayer"><button className="homepage-button">Add New Player</button></NavLink>
+              </div>
+              <div className="individual-button-container">
+                <NavLink to="/gamescore"><button className="homepage-button">Log game score</button></NavLink>
+              </div>
+              <div className="individual-button-container">
+                <NavLink to="/leaderboard"><button className="homepage-button">Leaderboard</button></NavLink>
+              </div>
             </div>
-            <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-              MTG Taps and Taps
-            </p>
-            <div className="ButtonContainer">
-              <button className="homepage-button"><NavLink to="/newplayer">Add New Player</NavLink></button>
-            </div>
-            <div className="ButtonContainer">
-              <button className="homepage-button"><NavLink to="/gamescore">Log game score</NavLink></button>
-            </div>
-            <div className="ButtonContainer">
-              <button className="homepage-button"><NavLink to="/leaderboard">Leaderboard</NavLink></button>
-            </div>
-            <ul>
+            <ul className="discord">
               {resources.map(({ href, text, icon }) => (
                 <li key={href}>
                   <a
@@ -42,7 +38,6 @@ export function HomePage() {
                 </li>
               ))}
             </ul>
-          </nav>
         </div>
       </div>
     </main>

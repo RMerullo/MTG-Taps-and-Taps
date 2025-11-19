@@ -28,3 +28,27 @@
 .homepage-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+
+.button-container, .discord {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.individual-button-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.image-container {
+  text-align:center;
+  width: 100%;
+}
+
+.icon {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 78px;
+  width: 54px;
+}
