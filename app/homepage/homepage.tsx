@@ -1,6 +1,7 @@
 import beerimage from "./beer-svgrepo-com.svg";
 import wizardimage from "./hat-wizard-svgrepo-com.svg";
-import button from "./buttons.css";
+import { NavLink } from "react-router";
+import './buttons.css';
 
 export function HomePage() {
   return (
@@ -9,22 +10,22 @@ export function HomePage() {
         <div className="max-w-[300px] w-full space-y-6 px-4">
           <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
             <div className="App">
-              <img src={beerimage} alt="Beer Image" style={{ height: 53, width: 36 }}/>
+              <img src={beerimage} alt="Beer Image" style={{ height: 53, width: 36 }} />
             </div>
             <div className="App">
-              <img src={wizardimage} alt="Beer Image" style={{ height: 53, width: 36 }}/>
+              <img src={wizardimage} alt="Beer Image" style={{ height: 53, width: 36 }} />
             </div>
             <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
               MTG Taps and Taps
             </p>
             <div className="ButtonContainer">
-              <button className="homepage-button">Add New Player</button>
+              <button className="homepage-button"><NavLink to="/newplayer">Add New Player</NavLink></button>
             </div>
             <div className="ButtonContainer">
-              <button className="homepage-button">Log game score</button>
+              <button className="homepage-button"><NavLink to="/gamescore">Log game score</NavLink></button>
             </div>
             <div className="ButtonContainer">
-              <button className="homepage-button">Leaderboard</button>
+              <button className="homepage-button"><NavLink to="/leaderboard">Leaderboard</NavLink></button>
             </div>
             <ul>
               {resources.map(({ href, text, icon }) => (
