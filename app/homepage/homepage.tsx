@@ -1,5 +1,5 @@
-import beerimage from "./beer-svgrepo-com.svg";
-import wizardimage from "./hat-wizard-svgrepo-com.svg";
+import beerimage from "~/assets/beer-svgrepo-com.svg";
+import wizardimage from "~/assets/hat-wizard-svgrepo-com.svg";
 import { NavLink } from "react-router";
 import './homepage.css';
 

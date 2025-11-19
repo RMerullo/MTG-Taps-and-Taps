@@ -3,3 +3,36 @@ h1 {
   color: white;
 }
 
+#fname, #lname, #email, #pn {
+  color: black;
+  border-color: gray;
+  border:1px solid gray;
+  border-radius: 5px;
+}
+
+.view-players-button, .save-button, .go-back-button {
+  /* Basic dimensions and background */
+  width: 150px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  background-color: #007bff; /* Example blue color */
+  color: white; /* Text color */
+  margin: 0 auto;
+  position: relative;
+
+  /* Text styling */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px; /* Vertically center text if height is fixed */
+
+  /* Remove default button styles */
+  border: none;
+  cursor: pointer;
+  outline: none; /* Remove outline on focus */
+
+  /* Optional: Add a subtle shadow */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+  /* Optional: Hover effect */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
