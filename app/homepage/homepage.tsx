@@ -8,26 +8,28 @@ export function HomePage() {
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <div className="max-w-[300px] w-full space-y-6 px-4">
-            <div className="image-container">
-              <img src={beerimage} alt="Beer Image" className="icon" />
-              <img src={wizardimage} alt="Beer Image" className="icon" />
+          <div className="image-container">
+            <img src={beerimage} alt="Beer Image" className="icon" />
+            <img src={wizardimage} alt="Beer Image" className="icon" />
+          </div>
+          <div className="button-container">
+            <div className="individual-button-container">
+              <NavLink to="/newplayer"><button className="homepage-button">Add New Player</button></NavLink>
             </div>
-            <div className="button-container">
-              <div className="individual-button-container">
-                <NavLink to="/newplayer"><button className="homepage-button">Add New Player</button></NavLink>
-              </div>
-              <div className="individual-button-container">
-                <NavLink to="/gamescore"><button className="homepage-button">Log game score</button></NavLink>
-              </div>
-              <div className="individual-button-container">
-                <NavLink to="/leaderboard"><button className="homepage-button">Leaderboard</button></NavLink>
-              </div>
+            <div className="individual-button-container">
+              <NavLink to="/gamescore"><button className="homepage-button">Log game score</button></NavLink>
             </div>
-            <ul className="discord">
-              {resources.map(({ href, text, icon }) => (
-                <li key={href}>
+            <div className="individual-button-container">
+              <NavLink to="/leaderboard"><button className="homepage-button">Leaderboard</button></NavLink>
+            </div>
+          </div>
+          <ul>
+            {resources.map(({ href, text, icon }) => (
+              <li key={href}>
+                <div className="discord-container">
                   <a
-                    className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
+                    // className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
+                    className="discord"
                     href={href}
                     target="_blank"
                     rel="noreferrer"
@@ -35,9 +37,10 @@ export function HomePage() {
                     {icon}
                     {text}
                   </a>
-                </li>
-              ))}
-            </ul>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </main>
@@ -55,6 +58,7 @@ const resources = [
         height="20"
         viewBox="0 0 24 20"
         fill="none"
+        id="discord-image"
         className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300"
       >
         <path

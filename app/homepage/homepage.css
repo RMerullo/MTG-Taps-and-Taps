@@ -29,7 +29,13 @@
   background-color: #0056b3; /* Darker blue on hover */
 }
 
-.button-container, .discord {
+.button-container {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.discord-container {
   margin: 0 auto;
   position: relative;
   text-align: center;
@@ -51,4 +57,13 @@
   margin-right: auto;
   height: 78px;
   width: 54px;
+}
+
+.discord {
+  display: inline-block;
+  color:#0056b3;
+}
+
+#discord-image {
+  display:inline-block;
 }
